@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: searched
+source: https://channelmeter.com/robots.txt
+# Real AIPREF-style Content-Signal directives served in channelmeter.com/robots.txt
+# (Cloudflare-managed content-signals block). Captures the site's machine-readable
+# consent posture for search / AI training / AI input. Absence of a /.well-known/
+# security.txt, openid-configuration, oauth-authorization-server, api-catalog, or
+# ai-plugin.json was verified: those paths return the SPA HTML shell (text/html),
+# not real well-known documents, so no WellKnown/SecurityTxt artifact is emitted.
+type: ContentSignal
+content_signals:
+  - user_agent: "*"
+    signal: "search=yes,ai-train=no,use=reference"
+    allow: "/"
+# Named AI crawlers fully disallowed via robots.txt Disallow:
+disallowed_agents:
+  - Amazonbot
+  - Applebot-Extended
+  - Bytespider
+  - CCBot
+  - ClaudeBot
+  - CloudflareBrowserRenderingCrawler
+  - Google-Extended
+  - GPTBot
+  - meta-externalagent
+rights_reservation: >-
+  Restrictions expressed via Content Signals are stated as express reservations of
+  rights under Article 4 of EU Directive 2019/790 on Copyright in the Digital Single Market.
+well_known_probed:
+  - path: /.well-known/security.txt
+    status: 200
+    real: false   # returns SPA HTML shell, not RFC 9116 text
+  - path: /.well-known/openid-configuration
+    status: 200
+    real: false
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    real: false
+  - path: /.well-known/api-catalog
+    status: 200
+    real: false
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    real: false

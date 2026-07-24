@@ -1,7 +1,15 @@
 aid: channelmeter
 name: ChannelMeter
-description: ChannelMeter is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  ChannelMeter is a creator management and payments platform for multi-channel
+  networks, agencies, and brands. Founded in 2012 and headquartered in San
+  Francisco, it provides an all-in-one suite for creator discovery, onboarding,
+  contract management, analytics, and automated global payouts. Its Creator Pay
+  product moves money to creators across 21+ currencies and 50+ countries, and
+  Creator Cash offers cash advances to creators. ChannelMeter reports having
+  processed over $1B in payments to more than one million creators, working with
+  Stripe and Fifth Third Bank for financial services. The company is backed by
+  500 Global.
 url: https://raw.githubusercontent.com/api-evangelist/channelmeter/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +17,30 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://channelmeter.com/img/logo-color-25ccee0e11d204599c7ae19d4572abff.svg
 tags:
 - Company
+- Creator Economy
+- Creator Management
+- Payments
+- Payouts
+- Analytics
+- Influencer Marketing
+- Fintech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +50,26 @@ maintainers:
 common:
 - type: Website
   url: https://channelmeter.com
+- type: SignUp
+  url: https://channelmeter.com/signup
+- type: Login
+  url: https://channelmeter.com/signin
+- type: Support
+  url: https://channelmeter.com/contact
+- type: TermsOfService
+  url: https://channelmeter.com/terms
+- type: PrivacyPolicy
+  url: https://channelmeter.com/privacy
+- type: GitHubOrganization
+  url: https://github.com/channelmeter
+- type: DomainSecurity
+  url: security/channelmeter-domain-security.yml
+- type: ContentSignal
+  url: well-known/channelmeter-content-signal.yml
+- type: LLMsTxt
+  url: llms/channelmeter-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
